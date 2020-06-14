@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#f6d365, #ffa991);
+  color: #fff;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #885345;
+}
+
+button {
+  color: #ffa991;
+  background: #fff;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background: #ffa991;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: #fff;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+form input {
+  border-radius: 10px 0 0 10px;
+  width: 300px;
+}
+
+form input:focus {
+  background: #f5f5f5;
+}
+
+form button {
+  border-radius: 0 10px 10px 0;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+}
+
+.buttons button {
+  border: none;
+  outline: none;
+  margin: 1px;
+  border-radius: 3px;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 40%;
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  margin: 0 0.5rem 0.5rem 0.5rem;
+  padding: 0.2rem;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.todo-item p {
+  text-decoration: line-through transparent;
+  cursor: pointer;
+  transition: color 0.3s, text-decoration-color 0.7s;
+}
+
+.todo-item p.completed {
+  color: #6e6e6e;
+  text-decoration-color: #6e6e6e;
+}
+
+.todo-item span {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.todo-item span:hover {
+  color: #d31f1f;
+}
+
+.todo-enter-active {
+  transition: all 0.5s cubic-bezier(0.415, 0.1, 0.37, 1.355);
+}
+
+.todo-leave-active {
+  transition: all 0.2s;
+  position: absolute;
+}
+
+.todo-enter,
+.todo-leave-to {
+  transform: translateY(30px);
+  opacity: 0;
+}
