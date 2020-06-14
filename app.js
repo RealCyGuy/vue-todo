@@ -162,7 +162,7 @@ Vue.component("todo-item", {
         <span class="material-icons reorder">reorder</span>
         <p @click="$emit('toggle-todo', todo.id)" @keyup.enter="$emit('toggle-todo', todo.id)" :class="{completed: todo.completed}" tabindex="0">{{ todo.text }}</p>
       </div>
-      <span class="material-icons delete" @click="$emit('remove-todo', todo.id)" @keyup.enter="$emit('remove-todo', todo.id)" tabindex="0">delete</span>
+      <span class="material-icons delete" @click="$emit('remove-todo', todo.id)" @keyup.enter="$emit('remove-todo', todo.id)" tabindex="0" aria-label="delete">delete</span>
     </li>
   `,
 });
