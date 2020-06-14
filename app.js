@@ -77,6 +77,12 @@ var vm = new Vue({
       "Reach level 94 by Tuesday...",
       "Count collected dandelion petals...",
       "Restore the paintings...",
+      "Solve world hunger...",
+      "Prepare for launch day...",
+      "Shine shoes shiner than shiny...",
+      "Bulldoze the stuffed animals...",
+      "Cut wood...",
+      "Practice rock origami..."
     ]),
   },
   methods: {
