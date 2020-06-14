@@ -120,6 +120,17 @@ var vm = new Vue({
     },
     help() {
       var list = document.querySelector(".todo-list");
+      if (!list) {
+        var app = document.getElementById("app");
+        var div = document.createElement("div");
+        div.setAttribute("class", "todo-container");
+        var list = document.createElement("ul");
+        list.setAttribute("class", "todo-list");
+        app.append(div);
+        div.append(list);
+        list = document.querySelector(".todo-list");
+        app.removeChild(document.querySelector(".make"));
+      }
       var li = document.createElement("li");
       li.innerHTML = `
         <div class="todo-item-left">
