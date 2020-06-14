@@ -69,7 +69,14 @@ var vm = new Vue({
       "Read terms of service...",
       "Get the source at https://github.com/realcyguy/vue-todo...",
       "Speak up about Eggplants x Penguins...",
-      "Brainstorm pencil ideas..."
+      "Brainstorm pencil ideas...",
+      "Gain brain percentages...",
+      "Draw the undrewed drawing...",
+      "Restock toothpaste holders...",
+      "Conquer a country...",
+      "Reach level 94 by Tuesday...",
+      "Count collected dandelion petals...",
+      "Restore the paintings..."
     ]),
   },
   methods: {
