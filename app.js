@@ -131,9 +131,11 @@ var vm = new Vue({
       li.setAttribute("class", "todo-item");
       list.prepend(li);
 
-      introJs().start().onexit(function() {
-        list.removeChild(list.childNodes[0]);
-      });
+      introJs()
+        .onexit(function () {
+          list.removeChild(list.childNodes[0]);
+        })
+        .start();
     },
   },
   mounted() {
