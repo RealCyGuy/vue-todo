@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Todo</title>
-    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intro.js@2.9.3/minified/introjs.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <noscript>
       <style>
         .todo-list,
@@ -25,6 +29,9 @@
 
   <body>
     <div id="app">
+      <span class="material-icons help" @click="help" tabindex="0"
+        >help</span
+      >
       <a
         href="https://github.com/realcyguy/vue-todo"
         class="github-corner"
@@ -73,10 +80,18 @@
           placeholder="Enable javascript..."
           :placeholder="placeholders[0]"
           title="What you need to do"
+          data-intro="Enter your todo text here."
+          data-step="1"
         />
-        <button type="submit">Add</button>
+        <button
+          type="submit"
+          data-intro="Click to add todo to list."
+          data-step="2"
+        >
+          Add
+        </button>
       </form>
-      <div class="buttons">
+      <div class="buttons" data-intro="Self-explanatory buttons." data-step="3">
         <button @click="removeAll">Remove all</button>
         <button @click="removeCompleted">Remove completed</button>
       </div>
@@ -112,6 +127,8 @@
     <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
     <!-- SortableJS and Vue.Draggable  -->
     <script src="https://cdn.jsdelivr.net/combine/npm/sortablejs@1.10.2,gh/SortableJS/Vue.Draggable@.19.2/dist/vuedraggable.umd.min.js"></script>
+    <!-- Intro.js -->
+    <script src="https://cdn.jsdelivr.net/npm/intro.js@2.9.3/minified/intro.min.js"></script>
     <!-- Script -->
     <script src="app.js"></script>
   </body>

@@ -20,7 +20,11 @@ header {
   margin: 0 5px;
 }
 
-.github-corner:hover .octo-arm {
+.github-corner svg:hover, .github-corner:focus svg {
+  fill: #e68f78 !important;
+}
+
+.github-corner:hover .octo-arm, .github-corner:focus .octo-arm {
   animation: octocat-wave 560ms ease-in-out;
 }
 
@@ -93,6 +97,8 @@ form button {
   align-items: center;
   justify-content: center;
   min-height: 10vh;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .buttons button {
@@ -199,4 +205,19 @@ form button {
   .todo-list {
     width: 100%;
   }
+}
+
+.help {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1px;
+  margin: 1px;
+  cursor: pointer;
+  font-size: 36px;
+  color: #ffffffa1;
+}
+
+.introjs-tooltip {
+  color: black;
 }

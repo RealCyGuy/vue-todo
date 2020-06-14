@@ -76,7 +76,7 @@ var vm = new Vue({
       "Conquer a country...",
       "Reach level 94 by Tuesday...",
       "Count collected dandelion petals...",
-      "Restore the paintings..."
+      "Restore the paintings...",
     ]),
   },
   methods: {
@@ -118,6 +118,23 @@ var vm = new Vue({
         }
       }
     },
+    help() {
+      var list = document.querySelector(".todo-list");
+      var li = document.createElement("li");
+      li.innerHTML = `
+        <div class="todo-item-left">
+          <span class="material-icons reorder" data-intro="Hold and drag to reorder.">reorder</span>
+          <p data-intro="Click to toggle completion." data-step="4">Finish the tutorial!</p>
+        </div>
+        <span class="material-icons delete" data-intro="Press to delete.">delete</span>
+      `;
+      li.setAttribute("class", "todo-item");
+      list.prepend(li);
+
+      introJs().start().onexit(function() {
+        list.removeChild(list.childNodes[0]);
+      });
+    },
   },
   mounted() {
     if (localStorage.todos) {
@@ -141,9 +158,9 @@ Vue.component("todo-item", {
     <li class="todo-item">
       <div class="todo-item-left">
         <span class="material-icons reorder">reorder</span>
-        <p @click="$emit('toggle-todo', todo.id)" :class="{completed: todo.completed}">{{ todo.text }}</p>
+        <p @click="$emit('toggle-todo', todo.id)" @keyup.enter="$emit('toggle-todo', todo.id)" :class="{completed: todo.completed}" tabindex="0">{{ todo.text }}</p>
       </div>
-      <span class="material-icons delete" @click="$emit('remove-todo', todo.id)">delete</span>
+      <span class="material-icons delete" @click="$emit('remove-todo', todo.id)" @keyup.enter="$emit('remove-todo', todo.id)" tabindex="0">delete</span>
     </li>
   `,
 });
