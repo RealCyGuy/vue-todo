@@ -133,7 +133,7 @@ var vm = new Vue({
 
       introJs()
         .onexit(function () {
-          list.removeChild(list.childNodes[0]);
+          window.location.reload(false); 
         })
         .start();
     },
