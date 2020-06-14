@@ -80,14 +80,13 @@
         <button @click="removeAll">Remove all</button>
         <button @click="removeCompleted">Remove completed</button>
       </div>
-      <div class="todo-container">
-        <transition-group
-          tag="ul"
-          name="todo"
-          class="todo-list"
-          v-if="todos.length"
-          appear
-        >
+      <draggable
+        v-model="todos"
+        v-if="todos.length"
+        handle=".reorder"
+        class="todo-container"
+      >
+        <transition-group tag="ul" name="todo" class="todo-list" appear>
           <todo-item
             v-for="todo in todos"
             :todo="todo"
@@ -96,17 +95,19 @@
             @toggle-todo="toggleTodo"
           ></todo-item>
         </transition-group>
-        <p class="make" v-else>Go make a todo!</p>
-        <noscript><p>This app requires javascript to run.</p></noscript>
-      </div>
+      </draggable>
+      <p class="make todo-message" v-else>Go make a todo!</p>
+      <noscript><p class="todo-message">This app requires javascript to run.</p></noscript>
     </div>
 
     <!-- Development Vue.js -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- Production Vue.js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     <!-- UUID -->
     <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <!-- SortableJS and Vue.Draggable  -->
+    <script src="https://cdn.jsdelivr.net/combine/npm/sortablejs@1.10.2,gh/SortableJS/Vue.Draggable@.19.2/dist/vuedraggable.umd.min.js"></script>
     <!-- Script -->
     <script src="app.js"></script>
   </body>

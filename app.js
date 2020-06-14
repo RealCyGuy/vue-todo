@@ -139,8 +139,11 @@ Vue.component("todo-item", {
   props: ["todo"],
   template: `
     <li class="todo-item">
-      <p @click="$emit('toggle-todo', todo.id)" :class="{completed: todo.completed}">{{ todo.text }}</p>
-      <span class="material-icons" @click="$emit('remove-todo', todo.id)">delete</span>
+      <div class="todo-item-left">
+        <span class="material-icons reorder">reorder</span>
+        <p @click="$emit('toggle-todo', todo.id)" :class="{completed: todo.completed}">{{ todo.text }}</p>
+      </div>
+      <span class="material-icons delete" @click="$emit('remove-todo', todo.id)">delete</span>
     </li>
   `,
 });

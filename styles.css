@@ -107,8 +107,12 @@ form button {
   align-items: center;
 }
 
+.todo-message {
+  text-align: center;
+}
+
 .todo-list {
-  min-width: 40%;
+  min-width: 50%;
   list-style: none;
   padding: 0;
 }
@@ -126,6 +130,21 @@ form button {
   border-radius: 5px;
 }
 
+.todo-item span {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.todo-item-left {
+  display: flex;
+  align-items: center;
+}
+
+.todo-item p, .todo-item span {
+  margin: 4px;
+}
+
 .todo-item p {
   text-decoration: line-through transparent;
   cursor: pointer;
@@ -137,13 +156,7 @@ form button {
   text-decoration-color: #6e6e6e;
 }
 
-.todo-item span {
-  cursor: pointer;
-  transition: all 0.2s ease;
-  user-select: none;
-}
-
-.todo-item span:hover {
+.todo-item .delete:hover {
   color: #d31f1f;
 }
 
@@ -160,6 +173,12 @@ form button {
 .todo-leave-to {
   transform: translateY(30px);
   opacity: 0;
+}
+
+@media (max-width: 769px) {
+  .todo-list {
+    min-width: 70%;
+  }
 }
 
 @media (max-width: 500px) {
