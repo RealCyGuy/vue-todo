@@ -61,8 +61,8 @@
         <h1>Vue Todo</h1>
         <p>
           Very cool todo list by
-          <a href="https://realcyguy.netlify.app">Cyrus Yip</a>. Click to toggle
-          completion.
+          <a href="https://realcyguy.netlify.app">Cyrus Yip</a> with deleting,
+          completing, and reordering capabilities.
         </p>
       </header>
       <form @submit.prevent="addTodo">
@@ -97,7 +97,11 @@
         </transition-group>
       </draggable>
       <p class="make todo-message" v-else>Go make a todo!</p>
-      <noscript><p class="todo-message">This app requires javascript to run.</p></noscript>
+      <noscript
+        ><p class="todo-message">
+          This app requires javascript to run.
+        </p></noscript
+      >
     </div>
 
     <!-- Development Vue.js -->
