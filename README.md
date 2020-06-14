@@ -4,4 +4,4 @@ A very cool [vue.js](https://vuejs.org/) todo app. I used vue but didn't really 
 
 Hosted on netlify: <https://whatdoihavetodo.netlify.app/>.
 
-[![Photo](https://i.imgur.com/cl7dLWF.png)](https://whatdoihavetodo.netlify.app/)
+[![Photo](https://i.imgur.com/Ncp6vmK.png)](https://whatdoihavetodo.netlify.app/)
