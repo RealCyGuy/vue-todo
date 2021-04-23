@@ -146,6 +146,7 @@ form button {
 .todo-item-left {
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
 
 .todo-item p, .todo-item span {
@@ -156,6 +157,11 @@ form button {
   text-decoration: line-through transparent;
   cursor: pointer;
   transition: color 0.3s, text-decoration-color 0.7s;
+  width: 100%;
+}
+
+.todo-item p:hover {
+  color: #4d4d4d;
 }
 
 .todo-item p.completed {
