@@ -4,7 +4,8 @@
 }
 
 body {
-  background: linear-gradient(#f6d365, #ffa991);
+  background: #ffcc91;
+  background: linear-gradient(to bottom left, #f6d365, #ffa991);
   color: #fff;
   font-family: sans-serif;
   min-height: 100vh;
